@@ -54,10 +54,12 @@ if [ -n "$COMPATIBILITY" ]; then
 	if [ "$COMPATIBILITY" == "bionicbeaver" ]; then
 		installpackages+="libva2 "
 		installpackages+="bbswitch-dkms "
+		installpackages+="bumblebee "
+		installpackages+="bumblebee-nvidia "
 		installpackages+="pciutils "
 		installpackages+="lsb-release "
 		# Nvidia
-		installpackages+="nvidia-driver-396 "
+		installpackages+="nvidia-driver-410 "
 		installpackages+="nvidia-prime "
 
 		GRUBOPTIONS="quiet splash acpi_rev_override=1 nouveau.modeset=0"
@@ -70,7 +72,7 @@ if [ -n "$COMPATIBILITY" ]; then
 else
 	installpackages+="libva1 "
 	# Nvidia
-	installpackages+="nvidia-390 "
+	installpackages+="nvidia-410 "
 	installpackages+="nvidia-prime "
 fi
 installpackages+="gstreamer1.0-libav "
